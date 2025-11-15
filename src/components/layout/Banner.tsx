@@ -1,5 +1,7 @@
 import { Button } from '../ui/button'
 import { Link, useLocation } from 'react-router-dom'
+import logoImg from '@/assets/logo.png'
+import fortinetTrainingCenterImg from '@/assets/fortinet_training_center.png'
 
 export const Banner = () => {
   const location = useLocation()
@@ -11,7 +13,7 @@ export const Banner = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img 
-            src="/logo.png" 
+            src={logoImg} 
             alt="TripleC Logo" 
             className="h-12 w-auto"
           />
@@ -21,7 +23,7 @@ export const Banner = () => {
         {isTrainingCatalog && (
           <div className="absolute left-1/2 transform -translate-x-1/2">
             <img 
-              src="/fortinet_training_center.png" 
+              src={fortinetTrainingCenterImg} 
               alt="Fortinet Training Center" 
               className="h-12 w-auto"
             />

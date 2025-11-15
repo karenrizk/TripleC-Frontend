@@ -3,7 +3,7 @@ import { Footer } from './components/layout/Footer'
 import { Home } from './pages/Home'
 import { TrainingCatalog } from './pages/TrainingCatalog'
 import { ContactUs } from './pages/ContactUs'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Banner />
       <main className="grow">
         <Routes>
+          <Route path="" element={<Navigate to="/" replace />} />
           <Route path="/" element={<Home />} />
           <Route path="/training-catalog" element={<TrainingCatalog />} />
           <Route path="/contact-us" element={<ContactUs />} />

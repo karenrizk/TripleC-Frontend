@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { MapPin, Phone, Clock } from 'lucide-react'
+import logoImg from '@/assets/logo.png'
 
 export const Footer = () => {
   return (
@@ -9,7 +10,7 @@ export const Footer = () => {
           {/* Logo and Mission Statement */}
           <div className="md:col-span-1">
             <img 
-              src="/logo.png" 
+              src={logoImg} 
               alt="Triple C Logo" 
               className="h-12 w-auto mb-4"
             />

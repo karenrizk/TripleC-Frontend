@@ -11,6 +11,17 @@ import {
 } from '../../components/ui/collapsible'
 import { ChevronDown, Search, Filter } from 'lucide-react'
 import coursesData from '../../data/courses.json'
+import NSE12Img from '@/assets/NSE1-2.svg'
+import NSE3Img from '@/assets/NSE3.svg'
+import NSE45CloudImg from '@/assets/NSE4-5-Cloud.svg'
+import NSE45NetworkingImg from '@/assets/NSE4-5-Networking.svg'
+import NSE45SASEImg from '@/assets/NSE4-5-SASE.svg'
+import NSE45SecurityImg from '@/assets/NSE4-5-Security.svg'
+import NSE67CloudImg from '@/assets/NSE6-7-Cloud.svg'
+import NSE67NetworkingImg from '@/assets/NSE6-7-Networking.svg'
+import NSE67SASEImg from '@/assets/NSE6-7-SASE.svg'
+import NSE67SecurityImg from '@/assets/NSE6-7-Security.svg'
+import NSE8Img from '@/assets/NSE8.svg'
 
 interface Course {
   name: string
@@ -107,53 +118,53 @@ export const TrainingCatalog = () => {
 
     // NSE 8
     if (levels.includes('nse 8')) {
-      return '/NSE8.svg'
+      return NSE8Img
     }
 
     // NSE 6-7 certifications
     if (levels.includes('nse 6') || levels.includes('nse 7')) {
       if (certName.includes('cloud')) {
-        return '/NSE6-7-Cloud.svg'
+        return NSE67CloudImg
       }
       if (certName.includes('network') || certName.includes('secure networking')) {
-        return '/NSE6-7-Networking.svg'
+        return NSE67NetworkingImg
       }
       if (certName.includes('sase')) {
-        return '/NSE6-7-SASE.svg'
+        return NSE67SASEImg
       }
       if (certName.includes('security operations') || certName.includes('security')) {
-        return '/NSE6-7-Security.svg'
+        return NSE67SecurityImg
       }
     }
 
     // NSE 4-5 certifications
     if (levels.includes('nse 4') || levels.includes('nse 5')) {
       if (certName.includes('cloud')) {
-        return '/NSE4-5-Cloud.svg'
+        return NSE45CloudImg
       }
       if (certName.includes('network')) {
-        return '/NSE4-5-Networking.svg'
+        return NSE45NetworkingImg
       }
       if (certName.includes('sase')) {
-        return '/NSE4-5-SASE.svg'
+        return NSE45SASEImg
       }
       if (certName.includes('security operations') || certName.includes('security')) {
-        return '/NSE4-5-Security.svg'
+        return NSE45SecurityImg
       }
     }
 
     // NSE 3
     if (levels.includes('nse 3')) {
-      return '/NSE3.svg'
+      return NSE3Img
     }
 
     // NSE 1-2
     if (levels.includes('nse 1') || levels.includes('nse 2')) {
-      return '/NSE1-2.svg'
+      return NSE12Img
     }
 
     // Default fallback
-    return '/NSE1-2.svg'
+    return NSE12Img
   }
 
   // Function to get course logo based on NSE level
@@ -161,18 +172,18 @@ export const TrainingCatalog = () => {
     const level = nseLevel.toLowerCase()
 
     if (level.includes('8')) {
-      return '/NSE8.svg'
+      return NSE8Img
     }
     if (level.includes('7') || level.includes('6')) {
-      return '/NSE6-7-Security.svg'
+      return NSE67SecurityImg
     }
     if (level.includes('5') || level.includes('4')) {
-      return '/NSE4-5-Security.svg'
+      return NSE45SecurityImg
     }
     if (level.includes('3')) {
-      return '/NSE3.svg'
+      return NSE3Img
     }
-    return '/NSE1-2.svg'
+    return NSE12Img
   }
 
   return (

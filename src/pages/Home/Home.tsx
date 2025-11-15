@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../components/ui/tabs'
 import { Button } from '../../components/ui/button'
+import coursePicImg from '@/assets/course-pic.png'
+import fortinetTrainingCenterImg from '@/assets/fortinet_training_center.png'
+import levelsImg from '@/assets/levels.png'
 
 const AnimatedNumber = ({ end, suffix = '' }: { end: number; suffix?: string }) => {
   const [count, setCount] = useState(0)
@@ -170,14 +173,14 @@ export const Home = () => {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="flex justify-center">
             <img 
-              src="/course-pic.png" 
+              src={coursePicImg} 
               alt="Course" 
               className="w-full h-auto object-contain"
             />
           </div>
           <div className="flex justify-center items-center">
             <img 
-              src="/fortinet_training_center.png" 
+              src={fortinetTrainingCenterImg} 
               alt="Fortinet Training Center" 
               className="w-1/2 h-auto object-contain"
             />
@@ -220,7 +223,7 @@ export const Home = () => {
           {/* Levels Image */}
           <div className="mt-12 flex justify-start">
             <img 
-              src="/levels.png" 
+              src={levelsImg} 
               alt="Certification Levels" 
               className="w-full max-w-4xl h-auto object-contain"
             />

@@ -1,0 +1,245 @@
+{
+  "certifications": [
+    {
+      "name": "Fortinet Certified Fundamentals in Cybersecurity (FCF)",
+      "nse_levels": ["NSE 1", "NSE 2"],
+      "courses": [
+        {
+          "name": "Introduction to the Threat Landscape",
+          "nse_level": "NSE 1",
+          "description": "Overview of the cyberthreat landscape, key actors, and first principles to keep users and networks safe."
+        },
+        {
+          "name": "Getting Started in Cybersecurity",
+          "nse_level": "NSE 1",
+          "description": "Non-technical introduction to the most important cybersecurity fundamentals for business roles."
+        },
+        {
+          "name": "Technical Introduction to Cybersecurity",
+          "nse_level": "NSE 2",
+          "description": "Technical fundamentals for people moving into hands-on cybersecurity roles."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Associate in Cybersecurity (FCA)",
+      "nse_levels": ["NSE 3"],
+      "courses": [
+        {
+          "name": "FortiGate Operator",
+          "nse_level": "NSE 3",
+          "description": "Operate common FortiGate features and perform high-level device operations."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Professional (FCP) — Security Operations",
+      "nse_levels": ["NSE 4", "NSE 5"],
+      "courses": [
+        {
+          "name": "FortiGate Administrator",
+          "nse_level": "NSE 4",
+          "description": "Protect networks using the most common FortiGate features."
+        },
+        {
+          "name": "FortiAnalyzer Analyst",
+          "nse_level": "NSE 5",
+          "description": "Use FortiAnalyzer for centralized logging; identify threats via log analysis; manage events and reports."
+        },
+        {
+          "name": "FortiSIEM Analyst",
+          "nse_level": "NSE 5",
+          "description": "Operate FortiSIEM and integrate it into the network awareness infrastructure."
+        },
+        {
+          "name": "FortiSOAR Administrator",
+          "nse_level": "NSE 5",
+          "description": "Deploy, configure, manage, and monitor FortiSOAR in a SOC environment."
+        },
+        {
+          "name": "FortiSandbox Administrator",
+          "nse_level": "NSE 5",
+          "description": "Improve protection against advanced threats and understand how FortiSandbox detects them."
+        },
+        {
+          "name": "FortiEDR",
+          "nse_level": "NSE 5",
+          "description": "Protect endpoints from advanced attacks with orchestrated, real-time incident response."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Professional (FCP) — Network Security",
+      "nse_levels": ["NSE 4", "NSE 5"],
+      "courses": [
+        {
+          "name": "FortiGate Administrator",
+          "nse_level": "NSE 4",
+          "description": "Protect networks using the most common FortiGate features."
+        },
+        {
+          "name": "FortiClient EMS Administrator",
+          "nse_level": "NSE 5",
+          "description": "Use FortiClient EMS to deploy and provision FortiClient."
+        },
+        {
+          "name": "FortiManager Administrator",
+          "nse_level": "NSE 5",
+          "description": "Centralize administration and change control for many FortiGate devices with FortiManager."
+        },
+        {
+          "name": "FortiAnalyzer Administrator",
+          "nse_level": "NSE 5",
+          "description": "Deploy, configure, and secure FortiAnalyzer; register/analyze devices; manage logging and reporting."
+        },
+        {
+          "name": "FortiAuthenticator Administrator",
+          "nse_level": "NSE 5",
+          "description": "Administer identity and access with FortiAuthenticator."
+        },
+        {
+          "name": "FortiNAC",
+          "nse_level": "NSE 5",
+          "description": "Implement Network Access Control to secure device onboarding and segmentation."
+        },
+        {
+          "name": "FortiSwitch",
+          "nse_level": "NSE 5",
+          "description": "Deploy and administer FortiSwitch in secure campus/branch LANs."
+        },
+        {
+          "name": "Secure Wireless LAN Administrator",
+          "nse_level": "NSE 5",
+          "description": "Deploy and manage secure wireless LAN with Fortinet solutions."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Professional (FCP) — Cloud Security",
+      "nse_levels": ["NSE 4", "NSE 5"],
+      "courses": [
+        {
+          "name": "FortiOS Administrator (or FortiGate Administrator)",
+          "nse_level": "NSE 4",
+          "description": "Protect and operate networks using core FortiOS/FortiGate features."
+        },
+        {
+          "name": "FortiWeb Administrator",
+          "nse_level": "NSE 5",
+          "description": "Deploy, configure, and troubleshoot the Fortinet web application firewall."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Solution Specialist (FCSS) — Secure Networking",
+      "nse_levels": ["NSE 6", "NSE 7"],
+      "courses": [
+        {
+          "name": "Network Security Support Engineer",
+          "nse_level": "NSE 6",
+          "description": "Diagnose and troubleshoot common networking and security problems in Fortinet solutions."
+        },
+        {
+          "name": "LAN Edge Architect",
+          "nse_level": "NSE 6",
+          "description": "Design secure wired and wireless connectivity with FortiGate, FortiAP, FortiSwitch, and FortiAuthenticator."
+        },
+        {
+          "name": "OT Security Architect",
+          "nse_level": "NSE 6",
+          "description": "Design, deploy, administer, and monitor Fortinet solutions to secure OT infrastructures."
+        },
+        {
+          "name": "Enterprise Firewall Administrator",
+          "nse_level": "NSE 7",
+          "description": "Implement and centrally manage an enterprise security infrastructure with multiple FortiGate devices."
+        },
+        {
+          "name": "SD-WAN Architect",
+          "nse_level": "NSE 7",
+          "description": "Plan common SD-WAN deployment scenarios using Fortinet Secure SD-WAN."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Solution Specialist (FCSS) — Secure Access Service Edge (SASE)",
+      "nse_levels": ["NSE 6", "NSE 7"],
+      "courses": [
+        {
+          "name": "FortiSASE Administrator",
+          "nse_level": "NSE 6",
+          "description": "Configure FortiSASE policies and deployment, user authentication, use cases, and monitoring."
+        },
+        {
+          "name": "SD-WAN Architect",
+          "nse_level": "NSE 7",
+          "description": "Plan common SD-WAN deployment scenarios using Fortinet Secure SD-WAN."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Solution Specialist (FCSS) — Public Cloud Security",
+      "nse_levels": ["NSE 7"],
+      "courses": [
+        {
+          "name": "Public Cloud Security",
+          "nse_level": "NSE 7",
+          "description": "Design and operate Fortinet public-cloud security architectures across major providers."
+        },
+        {
+          "name": "Public Cloud Security Architect",
+          "nse_level": "NSE 7",
+          "description": "Understand major cloud components and the security challenges these environments present."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Solution Specialist (FCSS) — Cloud Security",
+      "nse_levels": ["NSE 6", "NSE 7"],
+      "courses": [
+        {
+          "name": "FortiMail Administrator",
+          "nse_level": "NSE 6",
+          "description": "Use FortiMail to protect the network from email-borne threats."
+        },
+        {
+          "name": "Public Cloud Security Architect",
+          "nse_level": "NSE 7",
+          "description": "Understand major cloud components and the security challenges these environments present."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Solution Specialist (FCSS) — Security Operations",
+      "nse_levels": ["NSE 6", "NSE 7"],
+      "courses": [
+        {
+          "name": "FortiSOAR Administrator",
+          "nse_level": "NSE 6",
+          "description": "Deploy, configure, manage, operate, and monitor FortiSOAR in a SOC."
+        },
+        {
+          "name": "FortiSIEM Analyst",
+          "nse_level": "NSE 6",
+          "description": "Use FortiSIEM and integrate it into a network awareness infrastructure."
+        },
+        {
+          "name": "Security Operations Architect",
+          "nse_level": "NSE 7",
+          "description": "Design, deploy, and manage a Fortinet SOC using FortiSIEM and FortiSOAR; analyze and respond to incidents."
+        }
+      ]
+    },
+    {
+      "name": "Fortinet Certified Expert in Cybersecurity (FCX)",
+      "nse_levels": ["NSE 8"],
+      "courses": [
+        {
+          "name": "FCX Immersion (recommended training)",
+          "nse_level": "NSE 8",
+          "description": "Two-day lab immersion to practice product configuration and prepare for the practical exam."
+        }
+      ]
+    }
+  ]
+}

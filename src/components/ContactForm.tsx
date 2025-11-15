@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from './ui/select'
 import { getData } from 'country-list'
+import emailjs from '@emailjs/browser'
 
 interface FormData {
   firstName: string
@@ -42,6 +43,9 @@ export const ContactForm = ({ initialCourse = '' }: ContactFormProps) => {
     ...(initialCourse && { courseInterest: initialCourse }),
     message: ''
   })
+  
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const isFormValid = () => {
     return (
@@ -69,7 +73,47 @@ export const ContactForm = ({ initialCourse = '' }: ContactFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form Data:', formData)
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    // EmailJS configuration
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_fsth1vp'
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_ggr28r3'
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'zUluU7Ga2CFTotBoN'
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: `${formData.firstName} ${formData.lastName}`,
+      from_email: formData.email,
+      phone: `${formData.areaCode} ${formData.phone}`,
+      company: formData.company,
+      country: formData.country,
+      course_interest: formData.courseInterest || 'N/A',
+      message: formData.message,
+      to_email: 'karen.l.rizk@gmail.com'
+    }
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then(() => {
+        setSubmitStatus('success')
+        setIsSubmitting(false)
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          areaCode: '',
+          phone: '',
+          company: '',
+          country: '',
+          message: ''
+        })
+      })
+      .catch((error) => {
+        console.error('Email send error:', error)
+        setSubmitStatus('error')
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -226,11 +270,26 @@ export const ContactForm = ({ initialCourse = '' }: ContactFormProps) => {
           type="submit" 
           size="lg" 
           className="w-full md:w-auto"
-          disabled={!isFormValid()}
+          disabled={!isFormValid() || isSubmitting}
         >
-          Send Message
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </Button>
       </div>
+
+      {/* Status Messages */}
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+          <p className="font-semibold">Message sent successfully!</p>
+          <p className="text-sm">We'll get back to you as soon as possible.</p>
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+          <p className="font-semibold">Failed to send message.</p>
+          <p className="text-sm">Please try again or contact us directly via email.</p>
+        </div>
+      )}
     </form>
   )
 }
